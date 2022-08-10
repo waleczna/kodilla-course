@@ -1,6 +1,10 @@
 package com.kodilla.testing.collection.library;
 
 
+import com.kodilla.testing.library.Book;
+import com.kodilla.testing.library.BookLibrary;
+import com.kodilla.testing.library.LibraryDatabase;
+import com.kodilla.testing.library.LibraryUser;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -106,9 +110,9 @@ class BookDirectoryTestSuite {
         List<Book> result3 = bookLibrary.listBooksInHandsOf(user3);
 
         // Then
-        assertEquals(0, rezult1.size());
-        assertEquals(1, rezult2.size());
-        assertEquals(5, rezult3.size());
+        assertEquals(0, result1.size());
+        assertEquals(1, result2.size());
+        assertEquals(5, result3.size());
 
     }
 

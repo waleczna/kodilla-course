@@ -1,9 +1,6 @@
 package com.kodilla.testing.weather.stub;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 class WeatherForecast {
     private Temperatures temperatures;
@@ -36,10 +33,11 @@ class WeatherForecast {
      Collections.sort(sortedTemps);
     //10 12 14 16, indeksy 0,1,2,3,
     //10 12 14 16 18 indeksy 0,1,2,3,4,
+     double result = 0;
      if (sortedTemps.size() % 2 == 0) {
         double left = sortedTemps.get(sortedTemps.size() / 2 - 1); //indeksy a wartości pola
         double right = sortedTemps.get(sortedTemps.size() / 2);
-        result = (left + right / 2);
+        result = (left + right) / 2;
      } else {
          result = sortedTemps.get((int) Math.floor(sortedTemps.size() / 2));
      }
