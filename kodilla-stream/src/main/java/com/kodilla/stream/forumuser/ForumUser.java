@@ -18,22 +18,37 @@ public class ForumUser {
     }
 
     public int getId() {
+
         return id;
     }
 
     public String getName() {
+
         return name;
     }
 
     public char getSex() {
+
         return sex;
     }
 
     public LocalDate getDateOfBirth() {
+
         return dateOfBirth;
     }
 
     public int getPostsCount() {
+
         return postsCount;
+    }
+    @Override
+    public String toString() {
+        return "ForumUser{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", dateOfBirth=" + dateOfBirth +
+                ", postsCount=" + postsCount +
+                '}';
     }
 }
