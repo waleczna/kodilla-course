@@ -11,7 +11,7 @@ class RpsGame {
            RpsSelection userSelection = UsersDialogs.getUserSelection();
            if(userSelection == RpsSelection.QUIT)
                return;
-           RpsSelection computerSelection = RpsAI.getComputerSelection();
+           RpsSelection computerSelection = RpsAI.getComputerSelection(userSelection);
            RpsWinner winner = RpsAI.getWinner(userSelection, computerSelection);
 
            if (winner == RpsWinner.HUMAN)
