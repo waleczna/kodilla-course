@@ -1,7 +1,5 @@
 package com.kodilla.testing.forum.statistics;
 
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -29,10 +27,6 @@ class ForumStatsTestSuite {
         List<String> usersList = List.of("u1", "u2", "u3", "u4", "u5");
         when(statisticsMock.usersNames()).thenReturn(usersList);
     }
-        // usersNames();
-        // usersCount = statistics.usersNames().size();
-
-
 
     @Test
     void testTheNumberOfPostsIs0() {
@@ -145,7 +139,10 @@ class ForumStatsTestSuite {
     void testTheNumbersOfUsersIs100() {
 
         //given
-        when(statisticsMock.usersNames()).thenReturn();
+        List<String> users = new ArrayList<>();
+        for (int n = 0; n < 100; n++)
+            users.add("User" + n);
+        when(statisticsMock.usersNames()).thenReturn(users);
 
         //when
         forumStats.calculateAdvStatistics(statisticsMock);

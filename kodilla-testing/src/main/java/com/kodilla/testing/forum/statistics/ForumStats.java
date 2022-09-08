@@ -1,10 +1,5 @@
 package com.kodilla.testing.forum.statistics;
 
-import com.sun.jdi.IntegerValue;
-
-
-import java.util.List;
-
 class ForumStats {
     private int usersCount;
     private int postsCount;
