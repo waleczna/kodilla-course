@@ -1,5 +1,10 @@
 package com.kodilla.testing.forum.statistics;
 
+import com.sun.jdi.IntegerValue;
+
+
+import java.util.List;
+
 class ForumStats {
     private int usersCount;
     private int postsCount;
@@ -13,14 +18,21 @@ class ForumStats {
         postsCount = statistics.postsCount();
         commentsCount = statistics.commentsCount();
         usersCount = statistics.usersNames().size();
-        if (usersCount > 0) {
+
+        if (usersCount > 0 ) {
             postsPerUser = postsCount / (double) usersCount;
             commentsPerUser = commentsCount / (double) usersCount;
         } else {
             postsPerUser = 0;
             commentsPerUser = 0;
         }
-        commentsPerPost = commentsCount / (double) postsCount;
+
+        if (postsCount > 0) {
+            commentsPerPost = commentsCount / (double) postsCount;
+        } else {
+            commentsPerPost = 0;
+        }
+
     }
 
     public int getUsersCount() {

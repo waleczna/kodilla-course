@@ -28,5 +28,4 @@ class ShapeCollector {
        s += "]";
        return s;
     }
-
 }
