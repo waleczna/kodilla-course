@@ -3,6 +3,7 @@ package com.kodilla.patterns2.decorator.taxiportal;
 import java.math.BigDecimal;
 
 public class MyTaxiNetworkOrderDecorator extends AbstractTaxiOrderDecorator {
+
     public MyTaxiNetworkOrderDecorator(TaxiOrder taxiOrder) {
         super(taxiOrder);
     }
