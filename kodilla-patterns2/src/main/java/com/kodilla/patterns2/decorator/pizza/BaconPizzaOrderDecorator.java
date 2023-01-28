@@ -15,6 +15,6 @@ public class BaconPizzaOrderDecorator extends AbstractPizzaOrderDecorator {
 
     @Override
     public String getDescription() {
-        return super.getDescription() + "bacon";
+        return super.getDescription() + " + bacon";
     }
 }

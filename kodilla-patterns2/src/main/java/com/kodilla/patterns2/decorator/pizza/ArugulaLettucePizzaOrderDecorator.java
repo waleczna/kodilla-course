@@ -15,6 +15,6 @@ public class ArugulaLettucePizzaOrderDecorator extends AbstractPizzaOrderDecorat
 
     @Override
     public String getDescription() {
-        return super.getDescription() + "arugulaLettuce";
+        return super.getDescription() + " + arugulaLettuce";
     }
 }

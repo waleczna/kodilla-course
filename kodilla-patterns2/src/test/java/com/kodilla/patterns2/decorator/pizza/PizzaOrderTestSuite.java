@@ -47,7 +47,7 @@ public class PizzaOrderTestSuite {
         // When
         String description = theOrder.getDescription();
         // Then
-        assertEquals("Cheese and tomato sauce" + "mushroom", description);
+        assertEquals("Cheese and tomato sauce" + " + mushroom", description);
     }
 
     @Test
@@ -73,7 +73,7 @@ public class PizzaOrderTestSuite {
         // When
         String description = theOrder.getDescription();
         // Then
-        assertEquals("Cheese and tomato sauce" + "mushroom" + "bacon" + "bacon", description);
+        assertEquals("Cheese and tomato sauce" + " + mushroom" + " + bacon" + " + bacon", description);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class PizzaOrderTestSuite {
         // When
         String description = theOrder.getDescription();
         // Then
-        assertEquals("Cheese and tomato sauce" + "mushroom" + "bacon" + "onion", description);
+        assertEquals("Cheese and tomato sauce" + " + mushroom" + " + bacon" + " + onion", description);
     }
 
     @Test
@@ -127,6 +127,6 @@ public class PizzaOrderTestSuite {
         // When
         String description = theOrder.getDescription();
         // Then
-        assertEquals("Cheese and tomato sauce" + "mushroom" + "bacon" + "onion" + "arugulaLettuce", description);
+        assertEquals("Cheese and tomato sauce" + " + mushroom" + " + bacon" + " + onion" + " + arugulaLettuce", description);
     }
 }
