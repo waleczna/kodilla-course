@@ -1,5 +1,8 @@
 package com.kodilla.patterns2.facade;
 
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +61,7 @@ public class Order {
     }
 
     public boolean isSubmitted() {
-        return isSubmmitted;
+        return true;
     }
 
     public void setSubmitted(boolean submitted) {

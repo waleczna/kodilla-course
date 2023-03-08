@@ -17,29 +17,30 @@ public class ForumTopic implements Observable {
     public void addPost(String post) {
         messages.add(post);
         notifyObservers(); //wysyła powiadomienia do każdego z obserwatorów po dodaniu nowego posta
+    }
 
-        @Override
-        public void registerObserver (Observer observer) {
-            observers.add(observer);
-        }
+    @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
 
-        @Override
-        public void notifyObservers () {
-            for (Observer observer : observers) {
-                observer.update(this);
-            }
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(this);
         }
+    }
 
-        @Override
-        public void removeObserver (Observer observer) {
-            observers.remove(observer);
-        }
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
 
-        public List<String> getMessages() {
-            return messages;
-        }
-        public String getName() {
-            return name;
-        }
+    public List<String> getMessages() {
+        return messages;
+    }
+
+    public String getName() {
+        return name;
     }
 }

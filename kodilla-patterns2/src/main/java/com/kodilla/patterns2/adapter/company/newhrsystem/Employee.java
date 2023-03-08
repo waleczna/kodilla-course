@@ -32,7 +32,7 @@ public class Employee {
      }
     @Override
     public boolean equals(Object o) {
-        if (this == 0) return true;
+        if (this == o) return true;
         if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
         return peselId != null ? peselId.equals(employee.peselId) : employee.peselId == null;

@@ -17,4 +17,8 @@ public final class ItemDto {
     public double getQuantity() {
         return quantity;
     }
+
+    public double getQty() {
+        return 0;
+    }
 }

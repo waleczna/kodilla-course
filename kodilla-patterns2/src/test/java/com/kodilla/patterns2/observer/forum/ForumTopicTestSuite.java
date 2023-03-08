@@ -16,10 +16,10 @@ public class ForumTopicTestSuite {
         ForumUser johnSmith = new ForumUser("John Smith");
         ForumUser ivoneEscobar = new ForumUser("Ivone Escobar");
         ForumUser jessiePinkman = new ForumUser("Jessie Pinkman");
-        javaHelpForum.registryObserver(johnSmith);
-        javaToolsForum.registryObserver(ivoneEscobar);
-        javaHelpForum.registryObserver(jessiePinkman);
-        javaToolsForum.registryObserver(jessiePinkman);
+        javaHelpForum.registerObserver(johnSmith);
+        javaToolsForum.registerObserver(ivoneEscobar);
+        javaHelpForum.registerObserver(jessiePinkman);
+        javaToolsForum.registerObserver(jessiePinkman);
         // When
                     // do obu wątków forum dodawane są przykładowe posty
         javaHelpForum.addPost("Hi everyone! Could you help me with for loop?");

@@ -8,23 +8,25 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+
 @Service
 public class OrderFacade {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
-    private final ShopService shopService;
+    private static Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
+    private ShopService shopService;
 
     @Autowired
     public OrderFacade(ShopService shopService) {
         this.shopService = shopService;
     }
+
+
     public void processOrder(final OrderDto order, final Long userId) throws OrderProcessingException {
         boolean wasError = false;
         Long orderId = shopService.openOrder(userId);
         LOGGER.info("Registering new order, ID: " + orderId);
         if (orderId < 0) {
             LOGGER.error(OrderProcessingException.ERR_NOT_AUTHORISED);
-            wasError = true;
             throw new OrderProcessingException(OrderProcessingException.ERR_NOT_AUTHORISED);
         }
         try {
